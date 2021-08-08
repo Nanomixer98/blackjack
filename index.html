@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+       
+    <div class="body-div">
+
+        <header class="titulo">
+            Blackjack
+        </header>
+
+        <div id="divBotones" class="row mt-2">
+            <div class="col text-center">
+                <button id="btnNuevo" class="btn btn-danger">Nuevo Juego</button>
+                <button id="btnPedir" disabled="disabled" class="btn btn-primary">Pedir Carta</button>
+                <button id="btnDetener" disabled="disabled" class="btn btn-primary">Detener</button>
+            </div>
+        </div>
+
+        <div class="row container">
+            <div class="col">
+                <h1>Jugador 1 - <small>0</small></h1>
+                <div id="jugador-cartas" class="divCartas">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row container mt-2">
+            <div class="col">
+                <h1>Computadora - <small>0</small></h1>
+                <div id="computadora-cartas" class="divCartas">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/underscore-min.js"></script>
+    <script src="./assets/js/juego-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        // inicializarJuego();
+        document.querySelector('#btnNuevo').addEventListener('click', () => {
+            miModulo.nuevoJuego();
+        });
+        miModulo.nuevoJuego();
+        
+    </script>
+
+</body>
+</html>
